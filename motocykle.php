@@ -15,9 +15,16 @@ class Motocykle extends BazaDanych
             return $motocykle;
         }
     }
+
+    public function wyswietl($result)
+    {
+        foreach ($result as $key => $value) {
+            echo $key.' ----- '.$value."\n";
+        }
+    }
 }
 $mn = new Motocykle('192.168.1.12', 'root', 'kornelius', 'dominik');
-print_r($mn->pobierz());
+$mn->wyswietl($mn->pobierz());
 
 //
 // $aa->asd();
@@ -26,5 +33,5 @@ print_r($mn->pobierz());
 // $aasdasd = $aa->asd();
 // $aasdasd = $aa->sfgdfg;
 // $sdavdf->asdf->asdadfgf->asdfsefr = '123';
-// $aaaa = $sdavdf->asdf->asdadfgasd()->asdfasdf;
+ //$aaaa = $sdavdf->asdf->asdadfgasd($asdfadf->asdfasf())->asdfasdf;
 
